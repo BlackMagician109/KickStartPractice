@@ -24,8 +24,8 @@ line1 = input() #Line 1 of the input
 testCases = int(line1)
 for i in range(testCases):
     line2 = input().split()
-    bags = line2[0]
-    kids = line2[1]
+    bags = int(line2[0])
+    kids = int(line2[1])
 
     candiesInBag = input().split()
 
@@ -35,7 +35,10 @@ for i in range(testCases):
     for i in candy:
         totalCandy += i
 
-    for i in range(testCases):
-        remainingCandy = totalCandy % kids
+    
+    remainingCandy = totalCandy % kids
+    #Emptying the variables for the next itteration of the loop
+    totalCandy = 0
+    candy = []
 
-        print("Case #i: " + remainingCandy)
+    print("Case #" + str(i) + ": " + str(remainingCandy))
