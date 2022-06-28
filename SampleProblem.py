@@ -16,29 +16,26 @@ testCases = 0  #Total number of test cases
 bags = 0    #Total Number of Bags
 kids = 0    #Total Number of kids
 candy = []  #Total number of candy in each bag
-
-
-#Inputs
-line1 = input() #Line 1 of the input
-line2 = input.split()
-
-testCases = int(line1)
-bags = line2[0]
-kids = line2[1]
-
-
-candiesInBag = input().split()
-
-for i in candiesInBag:
-    candy.append(int(i))
-
 totalCandy = 0  #Total number of candies in all the bags
 remainingCandy = 0  #Candies remaining after the distribution
 
-for i in candy:
-    totalCandy += i
-
+#Inputs
+line1 = input() #Line 1 of the input
+testCases = int(line1)
 for i in range(testCases):
-    remainingCandy = totalCandy % kids
+    line2 = input().split()
+    bags = line2[0]
+    kids = line2[1]
 
-    print("Case #i: " + remainingCandy)
+    candiesInBag = input().split()
+
+    for i in candiesInBag:
+        candy.append(int(i))
+    
+    for i in candy:
+        totalCandy += i
+
+    for i in range(testCases):
+        remainingCandy = totalCandy % kids
+
+        print("Case #i: " + remainingCandy)
