@@ -11,13 +11,21 @@
 #           Case #x: y, where x is the test case number and y is the number of candies remaining at the end
 #
 
-testCases = int(input())   #Total number of test cases
-#bags = 0 #Total Number of Bags
-#kids = 0    #Total Number of kids
+#Variables
+testCases = 0  #Total number of test cases
+bags = 0    #Total Number of Bags
+kids = 0    #Total Number of kids
 candy = []  #Total number of candy in each bag
 
-#testCases = input()
-bags, kids = int(input())
+
+#Inputs
+line1 = input() #Line 1 of the input
+line2 = input.split()
+
+testCases = int(line1)
+bags = line2[0]
+kids = line2[1]
+
 
 candiesInBag = input().split()
 
