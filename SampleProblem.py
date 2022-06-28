@@ -18,6 +18,7 @@ kids = 0    #Total Number of kids
 candy = []  #Total number of candy in each bag
 totalCandy = 0  #Total number of candies in all the bags
 remainingCandy = 0  #Candies remaining after the distribution
+ans = []    #Final answer of the program
 
 #Inputs
 line1 = input() #Line 1 of the input
@@ -37,8 +38,10 @@ for i in range(testCases):
 
     
     remainingCandy = totalCandy % kids
+    ans.append(remainingCandy)
     #Emptying the variables for the next itteration of the loop
     totalCandy = 0
     candy = []
 
-    print("Case #" + str(i) + ": " + str(remainingCandy))
+for i in ans:
+    print("Case #" + str(ans.index(i)+1) + ": " + str(i))
